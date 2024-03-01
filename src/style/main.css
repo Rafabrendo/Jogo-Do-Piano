@@ -6,13 +6,14 @@ body{
     justify-content: center;
     min-height: 100vh;
     background-color: #e3f2fd;
+    color: #fff;
 }
 
 .container{
     width: 780px;
     border-radius: 20px;
     padding: 35px 40px;
-    border: 1px solid red;
+    background-color: black;
 }
 
 header h2{
@@ -47,5 +48,28 @@ header .column span{
     position: relative;
 }
 
+/* Vai se comportar como uma div, porém o elemento é inline por padrão */
+.keys-check input::before{
+    content: "";
+    height: 20px;
+    width: 20px;
+    background-color: #8c8c8c;
+    top: 50%;
+    left: 0.3rem;
+    border-radius: inherit;/*Vai herdar o border-redius do elemento pai  */
+    position: absolute;
+    transform: translateY(-50%); /*Vai centralizar essa "div"*/
+    transition: all 0.3s ease; /*Vai deixar o movimento do botão, quando for clicado, mais suave*/
+}
 
+.keys-check 
+input:checked::before{
+    left: 2.1rem;
+    background-color: #8c8c8c;
 
+}
+
+.piano-keys{
+    display: flex;
+    margin-top: 40px;
+}
