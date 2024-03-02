@@ -6,6 +6,7 @@
     padding: 0;
     box-sizing: border-box; /*De borda a borda, na hora de contar, facilita */
     outline: none;/*Para não funcionar com o uso do tab. Configura uma ou mais das propriedades do contorno*/
-    user-select: none;
+    /* user-select: none; */
     /*Para não poder selecionar o elemento*/
+    font-family: "Poppins", sans-serif;
 }
