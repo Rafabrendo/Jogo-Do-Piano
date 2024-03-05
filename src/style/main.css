@@ -118,13 +118,16 @@ input:checked::before{
     font-size: 1.1rem;
 }
 
-.piano-keys .white:active {
+/* .piano-keys .white:active { */
+.piano-keys .white.active {
     box-shadow: inset -5px 5px 20px rgba(0,0,0,0.2);/*adiciona uma sombra na caixa */
     background: linear-gradient(to bottom #fff 0%, #eee 100%);
 
 }
 
-.piano-keys .black:active {
+/* .piano-keys .black:active { */
+.piano-keys .black.active {
+    /* pra deixar dinamica, eu fiz a classe.active */
     box-shadow: inset -5px 5px 10px rgba(255,255,255,0.1);/*adiciona uma sombra na caixa */
     background: linear-gradient(to bottom #000, #434343);
 

@@ -5,6 +5,13 @@ let audio = new Audio("src/tunes/a.wav");
 const playTune = (key) => {
     audio.src = `src/tunes/${key}.wav`
     audio.play();
+
+    const clickedKey = document.querySelector(`[data-key="${key}"]`)
+    clickedKey.classList.add("active") //É o pseudo-elemento que está no css
+    setTimeout(()=>{
+        clickedKey.classList.remove("active");
+    },150)
+
 };
 
 
