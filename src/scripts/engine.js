@@ -1,4 +1,5 @@
 const pianoKeys = document.querySelectorAll(".piano-keys .key");
+const volumeSlider = document.querySelector(".volume-slider input")//na classe volume-slider eu vou pegar o input
 
 let mapedKeys = []; //As teclas são vão tocar se estiverem dentro desse vetor
 let audio = new Audio("src/tunes/a.wav");
@@ -27,3 +28,12 @@ document.addEventListener("keydown", (e)=>{
         playTune(e.key);
     }
 });
+
+const handleVolume = (e)=>{
+    audio.volume = e.target.value;
+    //console.log(e.target.value);//Dentro da variavel tem o target que por sua vez tem a propriedade value.
+}
+
+volumeSlider.addEventListener("input", handleVolume)
+
+
