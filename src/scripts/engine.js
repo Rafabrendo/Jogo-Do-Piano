@@ -1,5 +1,7 @@
 const pianoKeys = document.querySelectorAll(".piano-keys .key");
-const volumeSlider = document.querySelector(".volume-slider input")//na classe volume-slider eu vou pegar o input
+const volumeSlider = document.querySelector(".volume-slider input");//na classe volume-slider eu vou pegar o input
+const keysCheck = document.querySelector(".keys-check input");
+
 
 let mapedKeys = []; //As teclas são vão tocar se estiverem dentro desse vetor
 let audio = new Audio("src/tunes/a.wav");
@@ -34,6 +36,11 @@ const handleVolume = (e)=>{
     //console.log(e.target.value);//Dentro da variavel tem o target que por sua vez tem a propriedade value.
 }
 
+const showHideKeys = (e)=>{
+    pianoKeys.forEach(key => key.classList.toggle("hide"))//Vai dar a classe hide quando a tecla for clicada
+    //A classe que vai ser formada: .key.hide
+}
+
 volumeSlider.addEventListener("input", handleVolume)
 
-
+keysCheck.addEventListener("click", showHideKeys);
